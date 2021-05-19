@@ -1,26 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 export default function Filters() {
+
+    const textInput = useRef(null);
+
     return(
         <div className="wrapper">
             <div className="searchbox">
-                <form id="search">
                     <FaSearch color="#777" padding="1em"/>
-                    <input type="text" placeholder="Search for a country..."/>
-                </form>
+                    <input ref={textInput} type="text" placeholder="Search for a country..."/>
             </div>
             <div className="filter">
-                <form id="filter">
-                    <input list="dropdown" placeholder="Filter by Region"/>
-                    <datalist id="dropdown">
-                        <option value="Africa"></option>
-                        <option value="America"></option>
-                        <option value="Asia"></option>
-                        <option value="Europe"></option>
-                        <option value="Oceania"></option>
-                    </datalist>
-                </form>
+                    <select id="dropdown">
+                        <option value="" selected hidden>Filter by Region</option>
+                        <option value="Africa">Africa</option>
+                        <option value="America">America</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
             </div>
         </div>
     )

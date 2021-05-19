@@ -22,9 +22,9 @@ export default function Countries() {
                         </div>
                         <div className="info">
                             <h3>{item.name}</h3>
-                            <p>Population: {item.population}</p>
-                            <p>Region: {item.region}</p>
-                            <p>Capital: {item.capital}</p>
+                            <p><strong>Population:</strong> {item.population.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")}</p>
+                            <p><strong>Region:</strong> {item.region}</p>
+                            <p><strong>Capital:</strong> {item.capital}</p>
                         </div>
                     </li>
                 ))}

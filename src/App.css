@@ -6,7 +6,7 @@ body {
 
 .header-wrapper {
   display: flex;
-  border-bottom: .1em solid rgb(114, 114, 114, 0.9);
+  border-bottom: .2em solid #F1F1F1;
 }
 
 .background {
@@ -17,19 +17,42 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 2em;
-  overflow: hidden;
 }
 
 .searchbox {
   display: flex;
+  background: #fff;
+  border-radius: .5em;
+  padding: .9em;
+  border: .1em solid #F1F1F1;
+  margin-left: 3em;
 }
 
-.wrapper input[type=text] {
-  width: 25em;
-  float: left;
-  padding: 1em;
+.searchbox input[type=text] {
+  font-family: 'Oxygen', sans-serif;
+  width: 20em;
   border: none;
-  box-shadow: 0 0 .2em #777;
+  background: none;
+  outline: none;
+  float: right;
+  margin-left: 1em;
+  padding: 0;
+  transition: .4s;
+}
+
+.filter {
+  background: #fff;
+  padding: .7em;
+  margin-right: 3em;
+  border: .1em solid #F1F1F1;
+  border-radius: .5em;
+}
+
+.filter select {
+  font-family: 'Oxygen', sans-serif;
+  width: 10em;
+  border: none;
+  background: none;
 }
 
 
